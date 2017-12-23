@@ -40,12 +40,9 @@ document.getElementById("myProgress").value =pro;
 }
 if ((pas.length >= 8)&&(pas.match(/([0-9])/))&&(pas.match(/([a-z])/))&&(pas.match(/([A-Z])/))&&(pas.match(/([!,%,&,@,#,$,^,*,?,_,~])/))) {
 	
-	document.getElementById("cetvrti").innerHTML="";
-	document.getElementById("drugi").innerHTML="";
-	document.getElementById("treci").innerHTML="";
+	
 	document.getElementById("prvi").innerHTML="TVOJ PASSWORD JE IZUZETAN";
-	document.getElementById("peti").innerHTML="";
-
+	
 
 }
 
