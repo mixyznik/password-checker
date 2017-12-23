@@ -6,34 +6,34 @@ function checkStrength() {
 var pro=0;
 if (pas.length < 8) {
 	//$("prvi").html("unesite dovoljan broj karaktera");
-document.getElementById("cetvrti").innerHTML="vise";
+document.getElementById("cetvrti").innerHTML="nemate dovoljan broj karaktera";
 }
 if (pas.length >= 8){
-	document.getElementById("cetvrti").innerHTML="tvoj Mojo je veci za +1";
+	document.getElementById("cetvrti").innerHTML="";
 pro=pro+20;
 document.getElementById("myProgress").value =pro;
 
 }
 if (pas.match(/([0-9])/)) {
-	document.getElementById("drugi").innerHTML="tvoj Mojo je veci za +1";
+	document.getElementById("drugi").innerHTML="";
 pro=pro+20;
 document.getElementById("myProgress").value =pro;
 
 }
 if (pas.match(/([a-z])/)) {
-	document.getElementById("treci").innerHTML="tvoj Mojo je veci za +1";
+	document.getElementById("treci").innerHTML="";
 	pro=pro+20;
 document.getElementById("myProgress").value =pro;
 
 }
  if (pas.match(/([A-Z])/)) {
-	document.getElementById("prvi").innerHTML="tvoj Mojo je veci za +1";
+	document.getElementById("prvi").innerHTML="";
 	pro=pro+20;
 document.getElementById("myProgress").value =pro;
 
 }
 if (pas.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
-	document.getElementById("peti").innerHTML="tvoj Mojo je veci za +1";
+	document.getElementById("peti").innerHTML="";
 	pro=pro+20;
 document.getElementById("myProgress").value =pro;
 
