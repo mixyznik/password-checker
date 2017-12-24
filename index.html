@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
      <link rel="stylesheet" type="text/css" href="css/password.css">
   </head>
   <body>
@@ -15,9 +16,9 @@
   <div class="jumbotron">
     <h1 class="text-info">Password checker!</h1>
 
-     <input type="email" id="mail" placeholder="Email"/><br/><br>
+     <input type="email" onkeypress="return RestrictSpace()" id="mail" placeholder="Email"/><br/><br>
   <form >
-    <input type="text" id="pass"  maxlength="14" onkeyup="checkStrength()"></body></br></br>
+    <input type="text" id="pass"  maxlength="14" onkeypress="return RestrictSpace()" onkeyup="checkStrength()"></body></br></br>
 
     </form>
 <div><progress id="myProgress" value="0" max="100"></div>
@@ -34,7 +35,7 @@
 <table id="myTable">
   
        <tr id="prvi" class="text-info"><td >-obavezno jedno veliko slovo</td></tr><br>
-       <tr id="drugi" class="text-info"><td>-obavezan jedan broj</td></tr><br>
+       <tr id="drugi" class="text-info"><td>-obavezan jedan broj<i class="fa fa-spinner" aria-hidden="true"></i></td></tr><br>
        <tr id="treci" class="text-info"><td>-obavezno jedno malo slovo</td></tr><br>
        <tr id="cetvrti" class="text-info"><td>-minimum 8 karaktera</td></tr><br>    
        <tr id="peti" class="text-info"><td>-obavezan jedan specijalni karakter</td></tr>

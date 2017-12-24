@@ -1,4 +1,5 @@
 //var em=document.getElementById("mail");
+
 var pw=document.getElementById("pass");
 function checkStrength() {
 	var pas=pw.value;
@@ -43,14 +44,17 @@ document.getElementById("myProgress").value =pro;
 if ((pas.length >= 8)&&(pas.match(/([0-9])/))&&(pas.match(/([a-z])/))&&(pas.match(/([A-Z])/))&&(pas.match(/([!,%,&,@,#,$,^,*,?,_,~])/))) {
 	
 	
-	document.getElementById("prvi").innerHTML="TVOJ PASSWORD JE IZUZETAN";
+	document.getElementById("prvi").innerHTML="TVOJ PASSWORD JE IZUZETAN!";
    document.getElementById("prvi").className="text-success";
-  /* document.getElementById("drugi").className="element:before";*/
+   document.getElementById("drugi").innerHTML="TI SI ALFA MUŽJAK!"
+    document.getElementById("drugi").className="text-success";
+ /*  document.getElementById("drugi").className="element:before";*/
     /*document.getElementById("prvi").classList.add("element:before");*/
-   /*document.getElementById("prvi").setAttribute("class", "element:before");*/
+  /* document.getElementById("prvi").setAttribute("class", "drugi:before");*/
 }
 if (!pas.match(/([0-9])/)) {
 	document.getElementById("drugi").innerHTML="-obavezan jedan broj";
+  document.getElementById("drugi").className="text-info";
 }
 if (!pas.match(/([a-z])/)) {
 	document.getElementById("treci").innerHTML="-obavezno jedno malo slovo";
@@ -65,6 +69,13 @@ if (!pas.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
 if (pas=="") {
 	document.getElementById("myProgress").value =0;
 }
+
+
+
 }
 //});*/
-
+function RestrictSpace() {
+    if (event.keyCode == 32) {
+        return false;
+    }
+}
